@@ -1,4 +1,5 @@
 nbproject
 sites/default/files
 sites/default/settings.php
-
+themes/
+sites/all/themes/genesis
