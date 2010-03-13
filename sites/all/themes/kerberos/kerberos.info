@@ -1,0 +1,51 @@
+;----------// Theme Information
+
+  name         = Kerberos
+  description  = Theme for TING-projects community sites by Jesper W&oelig;ldiche
+  core         = 6.x
+  engine       = phptemplate
+  screenshot   = screenshot.png
+  
+;----------// Regions
+
+  regions[region_mainmenu]    = Main menu region
+  regions[top_of_page]        = Top of page
+  regions[content_top]        = Content Top
+  regions[content_bottom]     = Content Bottom
+  regions[menu_right]         = Sidebar Menu
+  regions[right]              = Sidebar Right
+  regions[bottom_of_page]     = Bottom of page
+  regions[footer_1]           = Footer Left
+  regions[footer_2]           = Footer Middle Left
+  regions[footer_3]           = Footer Middle Right
+  regions[footer_4]           = Footer Right
+
+;----------// Styles
+
+  stylesheets[all][] = styles/reset.css
+  stylesheets[all][] = styles/layout.css
+  stylesheets[all][] = styles/typography.css
+  ;stylesheets[print] = styles/print.css
+  ;stylesheets[handheld] = styles/mobile.css
+
+  ; Debug styles
+  ;stylesheets[all] = styles/debug.css
+
+  
+;----------// IE Conditional Stylesheets
+
+  ; Support conditional styles. Module included in theme
+
+  ;conditional-stylesheets[if lte IE 6][all][] = css/ie/ie-example.css
+
+  
+;----------// Theme Features
+
+  features[] = logo
+  features[] = name
+  features[] = slogan
+  features[] = mission
+  features[] = search
+  features[] = favicon
+  features[] = primary_links
+  features[] = secondary_links
