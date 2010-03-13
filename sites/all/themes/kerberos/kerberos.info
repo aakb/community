@@ -3,6 +3,7 @@
   name         = Kerberos
   description  = Theme for TING-projects community sites by Jesper W&oelig;ldiche
   core         = 6.x
+  version      = 0.1
   engine       = phptemplate
   screenshot   = screenshot.png
   
