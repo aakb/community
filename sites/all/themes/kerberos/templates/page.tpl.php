@@ -17,11 +17,14 @@
     </div>
     <div id="wrapper">
       <?php if ($site_logo): print $site_logo; endif; ?>
-    
-      <?php if ($region_mainmenu): print '<div id="main-menu">'. $region_mainmenu .'</div>'; endif; ?>
-    
+      <?php if ($region_mainmenu): print '<div id="main-menu">'. $region_mainmenu .'</div>'; endif; ?>    
       <?php if ($breadcrumb): print $breadcrumb; endif; ?>
     
+      <?php if ($front_1 || $front_2 || $front_3) { print '<ul id="frontpage-blocks" class="region">';?>
+        <?php if ($front_1) { print '<li>'. $front_1 .'</li>'; } ?>
+        <?php if ($front_2) { print '<li>'. $front_2 .'</li>'; } ?>
+        <?php if ($front_3) { print '<li>'. $front_3 .'</li>'; } ?>
+      <?php print '</ul>'; } ?>
       <?php if ($top_of_page): print '<div id="header-content" class="region">'. $top_of_page .'</div>'; endif; ?> 
     
       <div id="content">

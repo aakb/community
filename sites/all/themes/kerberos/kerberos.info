@@ -10,7 +10,10 @@
 ;----------// Regions
 
   regions[region_mainmenu]    = Main menu region
-  regions[top_of_page]        = Top of page
+  regions[front_1]            = Frontpage top left
+  regions[front_2]            = Frontpage top middle
+  regions[front_3]            = Frontpage top right  
+  regions[top_of_page]        = Above Content Leaderboard
   regions[content_top]        = Content Top
   regions[content_bottom]     = Content Bottom
   regions[menu_right]         = Sidebar Menu
