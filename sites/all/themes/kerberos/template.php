@@ -42,11 +42,48 @@ function kerberos_preprocess_page(&$vars, $hook) {
     $vars['styles'] .= $vars['conditional_styles'] = variable_get('conditional_styles_' . $GLOBALS['theme'], '');
   }
 
+
+
+  // Add template suggestions based on url alias
+  if (module_exists('path')) {
+  
+    // Get url alias og isolate last segment
+    $url_alias = drupal_get_path_alias($_GET['q']);
+    $alias_parts = explode('/', $url_alias);
+    $last = array_reverse($alias_parts);
+    $last_part = $last[0];
+
+    // Check for and exclude edit pages
+    if ($last_part != "edit") {
+
+      // Create array for template suggestions
+      $templates = array ();
+      $template_name = "page";
+      
+      // Add url-segments to template suggestions
+      foreach ($alias_parts as $part) {
+        if ($part != "page") {
+          $vars['template_files'][] = $template_name . '-' . $part;
+        }
+      } // end of foreach loop
+    } // end of edit check
+  
+    
+    // Check for subprojects
+    if ($alias_parts[0] == "ding") {
+      // Change site logo and text to project ID
+      $vars['logo_alt_text'] = "ding.TING";
+      $vars['logo'] = drupal_get_path('theme', 'Kerberos') ."/images/logo-ding.png";
+    } // end of check for subprojects
+  } // end of if module exist
+
   // Set variables for the logo and site_name.
   if (!empty($vars['logo'])) {
     // Return the site_name even when site_name is disabled in theme settings.
-    $vars['logo_alt_text'] = variable_get('site_name', '');
+    $vars['logo_alt_text'] = (empty($vars['logo_alt_text']) ? variable_get('site_name', '') : $vars['logo_alt_text']);
     $vars['site_logo'] = '<a id="site-logo" href="'. $vars['front_page'] .'" title="'. t('Home page') .'" rel="home"><img src="'. $vars['logo'] .'" alt="'. $vars['logo_alt_text'] .'" /></a>';
   }
-
+  
 }
+
+

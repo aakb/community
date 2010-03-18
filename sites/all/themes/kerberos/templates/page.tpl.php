@@ -8,25 +8,11 @@
     <?php print $scripts ?>
   </head>
   <body>
-    <div id="ting-bar">
-      <a id="ting-id" href="http://www.ting.dk/"><img src="sites/default/files/ting-logo.png" alt="En del af TING-familien" width="120" height="35" /></a>
-      <ul class="user-menu">
-        <li><a href="/"><?php print t(Login) ?></a></li>
-      </ul>
-      <?php print $search_box ?>
-    </div>
     <div id="wrapper">
       <?php if ($site_logo): print $site_logo; endif; ?>
       <?php if ($region_mainmenu): print '<div id="main-menu">'. $region_mainmenu .'</div>'; endif; ?>    
       <?php if ($breadcrumb): print $breadcrumb; endif; ?>
-    
-      <?php if ($front_1 || $front_2 || $front_3) { print '<ul id="frontpage-blocks" class="region">';?>
-        <?php if ($front_1) { print '<li>'. $front_1 .'</li>'; } ?>
-        <?php if ($front_2) { print '<li>'. $front_2 .'</li>'; } ?>
-        <?php if ($front_3) { print '<li>'. $front_3 .'</li>'; } ?>
-      <?php print '</ul>'; } ?>
-      <?php if ($top_of_page): print '<div id="header-content" class="region">'. $top_of_page .'</div>'; endif; ?> 
-    
+        
       <div id="content">
         <?php if ($title): print '<h1>'. $title .'</h1>'; endif; ?>
         <?php if ($tabs): print '<div id="tabs-wrapper" class="clear-block">'; endif; ?>
@@ -34,16 +20,9 @@
         <?php if ($tabs2): print '<ul class="tabs secondary">'. $tabs2 .'</ul>'; endif; ?>
         <?php if ($show_messages && $messages): print $messages; endif; ?>
         <?php print $help; ?>
-
         <?php print $content ?>
       </div>
-      
-      <?php if ($menu_right || $right):?>
-        <div id="sidebar-right">
-          <?php print $menu_right; ?>
-          <?php print $right; ?>
-        </div>
-      <?php endif; ?>
+
     
       <?php if ($bottom_of_page): print '<div id="secondary-content" class="region">'. $bottom_of_page .'</div>'; endif; ?>
       

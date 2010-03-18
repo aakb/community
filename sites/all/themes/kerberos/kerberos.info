@@ -9,15 +9,8 @@
   
 ;----------// Regions
 
-  regions[region_mainmenu]    = Main menu region
-  regions[front_1]            = Frontpage top left
-  regions[front_2]            = Frontpage top middle
-  regions[front_3]            = Frontpage top right  
+  regions[region_mainmenu]    = Main menu region 
   regions[top_of_page]        = Above Content Leaderboard
-  regions[content_top]        = Content Top
-  regions[content_bottom]     = Content Bottom
-  regions[menu_right]         = Sidebar Menu
-  regions[right]              = Sidebar Right
   regions[bottom_of_page]     = Bottom of page
   regions[footer_1]           = Footer Left
   regions[footer_2]           = Footer Middle Left
@@ -41,6 +34,10 @@
   ; Support conditional styles. Module included in theme
 
   ;conditional-stylesheets[if lte IE 6][all][] = css/ie/ie-example.css
+
+;----------// Panels layouts. 
+
+  plugins[panels][layouts] = layouts
 
   
 ;----------// Theme Features
