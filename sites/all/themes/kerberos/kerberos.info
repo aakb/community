@@ -17,7 +17,6 @@
   regions[footer_3]           = Footer Middle Right
   regions[footer_4]           = Footer Right
 
-
 ;----------// Styles
 
   stylesheets[all][] = styles/reset.css
