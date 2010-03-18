@@ -1,0 +1,100 @@
+/* ------ // Ting Bar ---------- */
+
+#ting-bar {
+  width: 928px;
+  padding: 4px 16px;
+  margin: 0 auto;
+  background: #ccc;
+  color: #fff;
+}
+
+  #ting-id {
+    float: left;
+    width: 200px;
+  }
+  
+  .user-menu {
+    float: left;
+    width: 450px;
+    padding-right: 25px;
+  }
+  
+    .user-menu li {
+      float: right;
+    }
+    
+  #search {
+    margin-left: 705px;
+  }
+
+/* ------ // Main Page ---------- */
+
+#wrapper {
+  width: 960px;
+  margin: 0 auto;
+  padding: 20px 0 0;  
+}
+
+/* ------ // Header ---------- */
+
+  #site-logo {
+    border: 1px dotted red;
+    height: 50px;
+    width: 260px;
+    display: block;
+    float: left;
+  }
+  
+  #main-menu {
+    float: right;
+  }
+  
+    #main-menu ul.menu {
+      overflow: hidden;
+    }
+    
+    #main-menu ul.menu li {
+      float: left;
+    }
+  
+  .breadcrumb {
+    clear: right;
+    float: right;
+  }
+
+  #header-content {
+    clear: both;
+  }
+  
+/* ------ // Content ---------- */
+
+  #content .panel-2col-stacked {
+  }
+  
+/* ------ // Sidebar ---------- */  
+
+  #sidebar-right {
+    margin-left: 600px;
+  }
+  
+  
+/* ------ // Secondary Content ---------- */
+  
+  #secondary-content {
+    clear: both;
+  }
+
+/* ------ // Footer ---------- */
+
+#footer {
+  width: 960px;
+  margin: 0 auto;
+  clear: both;
+  overflow: hidden;
+}
+
+  #footer>li {
+    width: 224px;
+    padding: 8px;
+    float: left;
+  } 
