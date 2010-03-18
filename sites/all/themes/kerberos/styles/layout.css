@@ -1,4 +1,85 @@
-/* ------ // Ting Bar ---------- */
+/* ------ // Main Page ---------- */
+
+#wrapper {
+  width: 960px;
+  margin: 0 auto;
+  padding: 20px 0 0;  
+}
+
+/* ------ // Header ---------- */
+
+  #site-logo {
+    border: 1px dotted red;
+    height: 50px;
+    width: 260px;
+    display: block;
+    float: left;
+    clear: right;
+  }
+  
+  #main-menu {
+    float: right;
+  }
+  
+    #main-menu ul.menu {
+      overflow: hidden;
+    }
+    
+    #main-menu ul.menu li {
+      float: left;
+      border-left: 1px solid #ccc;
+      padding: 0 8px;
+    }
+    
+    #main-menu ul.menu li:first-child {
+      border: none;
+    }
+  
+  .breadcrumb {
+    clear: both;
+    padding: 8px;
+  }
+
+  #header-content {
+    clear: both;
+  }
+  
+/* ------ // Content ---------- */
+
+  #content {
+    clear: both;
+    overflow: hidden;
+  }
+  
+  #content .panel-col-content {
+    float: left;
+    width: 480px;
+    padding-bottom: 16px;
+  }
+  
+  #content .panel-col-sidebar {
+    margin-left: 640px;
+    padding-bottom: 16px;
+  }
+  
+  #content .panel-col-bottom {
+    clear: both;
+  }
+  
+/* ------ // Sidebar ---------- */  
+
+  #sidebar-right {
+    margin-left: 600px;
+  }
+  
+  
+/* ------ // Secondary Content ---------- */
+  
+  #secondary-content {
+    clear: both;
+  }
+
+/* ------ // Ting Subsite Bar ---------- */
 
 #ting-bar {
   width: 928px;
@@ -27,62 +108,6 @@
     margin-left: 705px;
   }
 
-/* ------ // Main Page ---------- */
-
-#wrapper {
-  width: 960px;
-  margin: 0 auto;
-  padding: 20px 0 0;  
-}
-
-/* ------ // Header ---------- */
-
-  #site-logo {
-    border: 1px dotted red;
-    height: 50px;
-    width: 260px;
-    display: block;
-    float: left;
-  }
-  
-  #main-menu {
-    float: right;
-  }
-  
-    #main-menu ul.menu {
-      overflow: hidden;
-    }
-    
-    #main-menu ul.menu li {
-      float: left;
-    }
-  
-  .breadcrumb {
-    clear: right;
-    float: right;
-  }
-
-  #header-content {
-    clear: both;
-  }
-  
-/* ------ // Content ---------- */
-
-  #content .panel-2col-stacked {
-  }
-  
-/* ------ // Sidebar ---------- */  
-
-  #sidebar-right {
-    margin-left: 600px;
-  }
-  
-  
-/* ------ // Secondary Content ---------- */
-  
-  #secondary-content {
-    clear: both;
-  }
 
 /* ------ // Footer ---------- */
 

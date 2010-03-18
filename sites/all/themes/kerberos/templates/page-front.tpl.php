@@ -10,8 +10,8 @@
   <body>
     <?php if (!empty($admin)) print $admin; ?> 
     <div id="wrapper">
-      <?php if ($region_mainmenu): print '<div id="main-menu">'. $region_mainmenu .'</div>'; endif; ?>    
       <?php if ($site_logo): print $site_logo; endif; ?>
+      <?php if ($region_mainmenu): print '<div id="main-menu">'. $region_mainmenu .'</div>'; endif; ?>    
       <?php if ($breadcrumb): print $breadcrumb; endif; ?>
         
       <div id="content">

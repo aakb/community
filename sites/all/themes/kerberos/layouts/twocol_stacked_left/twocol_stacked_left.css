@@ -1,0 +1,22 @@
+#panels-dnd-main .panel-col-top {
+  clear: both;
+  margin-bottom: 6px;
+  padding: 3px;
+}
+
+#panels-dnd-main .panel-col-content {
+  float: left;
+  width: 58%;
+  padding: 3px;
+}
+
+#panels-dnd-main .panel-col-sidebar {
+  float: right;
+  width: 38%;
+  padding: 3px;
+}
+
+#panels-dnd-main .panel-col-bottom {
+  clear: both;
+  padding: 3px;
+}

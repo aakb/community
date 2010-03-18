@@ -1,0 +1,17 @@
+#block-ting-projects {
+  border: 2px solid #333;
+  border-width: 2px 0;
+  padding: 16px 0;
+  margin: 16px 0;
+  overflow: hidden;
+}
+
+  #block-ting-projects .pane-title {
+    padding: 0 8px;
+  }
+
+  #block-ting-projects .pane-content li {
+    float: left;
+    width: 304px;
+    padding: 8px;
+  }

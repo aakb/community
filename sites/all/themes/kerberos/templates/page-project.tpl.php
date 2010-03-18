@@ -9,6 +9,14 @@
   </head>
   <body>
     <?php if (!empty($admin)) print $admin; ?> 
+    <div id="ting-bar">
+      <a id="ting-id" href="http://www.ting.dk/"><img src="sites/default/files/ting-logo.png" alt="En del af TING-familien" width="120" height="35" /></a>
+      <ul class="user-menu">
+        <li><a href="/"><?php print t(Login) ?></a></li>
+      </ul>
+      <?php print $search_box ?>
+    </div>
+
     <div id="wrapper">
       <?php if ($region_mainmenu): print '<div id="main-menu">'. $region_mainmenu .'</div>'; endif; ?>    
       <?php if ($site_logo): print $site_logo; endif; ?>

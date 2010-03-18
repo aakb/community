@@ -1,0 +1,40 @@
+#panels-dnd-main .panel-col-topleft {
+  padding: 3px;
+  float: left;
+  width: 30%;
+}
+
+#panels-dnd-main .panel-col-topmiddle {
+  padding: 3px;
+  width: 30%;
+  margin: 0 auto;
+}
+
+#panels-dnd-main .panel-col-topright {
+  padding: 3px;
+  float: right;
+  width: 30%;
+}
+
+#panels-dnd-main .panel-col-top {
+  clear: both;
+  margin-bottom: 6px;
+  padding: 3px;
+}
+
+#panels-dnd-main .panel-col-content {
+  float: left;
+  width: 58%;
+  padding: 3px;
+}
+
+#panels-dnd-main .panel-col-sidebar {
+  float: right;
+  width: 38%;
+  padding: 3px;
+}
+
+#panels-dnd-main .panel-col-bottom {
+  clear: both;
+  padding: 3px;
+}

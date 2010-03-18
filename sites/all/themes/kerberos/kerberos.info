@@ -22,6 +22,7 @@
   stylesheets[all][] = styles/reset.css
   stylesheets[all][] = styles/layout.css
   stylesheets[all][] = styles/typography.css
+  stylesheets[all][] = styles/blocks.css
   ;stylesheets[print] = styles/print.css
   ;stylesheets[handheld] = styles/mobile.css
 

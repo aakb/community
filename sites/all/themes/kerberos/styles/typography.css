@@ -1,0 +1,29 @@
+body {
+  font-family: "Lucida Grande", Arial, sans-serif;
+  font-size: 62.5%;
+  line-height: 1;
+}
+
+h2, h1 {
+  font-family: Georgia;
+  font-size: 160%;
+  margin-bottom: 0.2em;
+}
+
+h1, .panel-col-content .pane-title {
+  font-size: 200%;
+}
+
+h3, h4 {
+  font-size: 130%;
+  margin-bottom: 0.5em;
+}
+
+#content {
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+#content p, #content ul, #content ol, #content blockquote {
+  margin-bottom: 0.4em;
+}
