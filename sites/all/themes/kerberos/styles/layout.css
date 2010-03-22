@@ -9,12 +9,17 @@
 /* ------ // Header ---------- */
 
   #site-logo {
-    border: 1px dotted red;
-    height: 50px;
-    width: 260px;
     display: block;
     float: left;
     clear: right;
+    padding-left: 8px;
+  }
+  
+  #mission {
+    clear: right;
+    margin-left: 320px;
+    padding: 0px 8px;
+    font-size: 40px;
   }
   
   #main-menu {

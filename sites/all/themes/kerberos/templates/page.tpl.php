@@ -7,12 +7,13 @@
     <?php print $styles ?>
     <?php print $scripts ?>
   </head>
-  <body>
+  <body class="<?php print $body_classes; ?>">
     <?php if (!empty($admin)) print $admin; ?> 
     <div id="wrapper">
-      <?php if ($region_mainmenu): print '<div id="main-menu">'. $region_mainmenu .'</div>'; endif; ?>    
-      <?php if ($site_logo): print $site_logo; endif; ?>
-      <?php if ($breadcrumb): print $breadcrumb; endif; ?>
+      <?php if ($region_mainmenu): print '<div id="main-menu">'. $region_mainmenu .'</div>'; endif; ?>
+      <?php if ($site_logo): print $site_logo; endif; ?>                
+      <?php if ($is_front): print '<p id="mission">'. $mission .'</p>'; endif; ?>
+      <?php if (!$is_front): print $breadcrumb; endif; ?>
         
       <div id="content">
         <?php if ($title): print '<h1>'. $title .'</h1>'; endif; ?>
@@ -23,10 +24,8 @@
         <?php print $help; ?>
         <?php print $content ?>
       </div>
-
     
-      <?php if ($bottom_of_page): print '<div id="secondary-content" class="region">'. $bottom_of_page .'</div>'; endif; ?>
-      
+      <?php if ($bottom_of_page): print '<div id="secondary-content" class="region">'. $bottom_of_page .'</div>'; endif; ?>      
       <?php if($footer_1 || $footer_2 || $footer_3 || $footer_4): ?>
         <ul id="footer">
           <li>

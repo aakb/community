@@ -67,33 +67,29 @@ function kerberos_preprocess_page(&$vars, $hook) {
         }
       } // end of foreach loop
     } // end of edit check
-  
-    
-    // Check for subprojects
-    /*
+      
+    // Check for subprojects    
     if ($alias_parts[0] == "dting") {
-
+    
       // Change site logo and text to project ID
       switch ($alias_parts[1]) {
         // If ding.TING subproject
-        case "ding" :        
+        case "forside" :
+        case "" :        
           $vars['logo_alt_text'] = "ding.TING";
-          $vars['logo'] = drupal_get_path('theme', 'Kerberos') ."/images/logo-ding.png";
+          $vars['logo'] = '/'. drupal_get_path('theme', 'Kerberos') ."/images/logo-dingting-front.png";
           break;
         default:
           $vars['logo_alt_text'] = "ding.TING";
-          $vars['logo'] = drupal_get_path('theme', 'Kerberos') ."/images/logo-ding.png";
+          $vars['logo'] = '/'. drupal_get_path('theme', 'Kerberos') ."/images/logo-dingting-default.png";
           break;
       }
-      
-      
-      
-
-    } // end of check for subprojects
-    */
-    $vars['logo_alt_text'] = $alias_parts[0];
-    
+    } // end of check for subprojects    
   } // end of if module exist
+
+  // Check for frontpage
+  
+    // If so - exchange logo for large, frontpage version
 
   // Set variables for the logo and site_name.
   if (!empty($vars['logo'])) {
