@@ -1,5 +1,5 @@
   <?php if ($content['top-left'] || $content['top-middle'] || $content['top-right']) { ?>
-    <ul class="panel-3-1-2-stacked">  
+    <ul class="panel-3-1-2-stacked panel-3-1-2-toprow">  
       <li class="panel-col-topleft">
         <?php print $content['top-left']; ?>
       </li>

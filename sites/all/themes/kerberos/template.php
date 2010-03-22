@@ -44,7 +44,7 @@ function kerberos_preprocess_page(&$vars, $hook) {
 
 
 
-  // Add template suggestions based on url alias
+  // Add template suggestions and alter output based on url alias
   if (module_exists('path')) {
   
     // Get url alias og isolate last segment
@@ -88,8 +88,10 @@ function kerberos_preprocess_page(&$vars, $hook) {
   } // end of if module exist
 
   // Check for frontpage
-  
+  if ($vars['is_front']) {
     // If so - exchange logo for large, frontpage version
+    $vars['logo'] = '/'. drupal_get_path('theme', 'Kerberos') ."/images/logo-tingconcept-front.png";
+  }
 
   // Set variables for the logo and site_name.
   if (!empty($vars['logo'])) {

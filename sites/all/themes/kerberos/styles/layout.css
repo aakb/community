@@ -6,6 +6,10 @@
   padding: 20px 0 0;  
 }
 
+.front #wrapper {
+  padding-top: 36px;
+}
+
 /* ------ // Header ---------- */
 
   #site-logo {
@@ -13,27 +17,35 @@
     float: left;
     clear: right;
     padding-left: 8px;
+    margin-top: 9px;
+    border-bottom: none;
+
   }
   
   #mission {
     clear: right;
     margin-left: 320px;
-    padding: 0px 8px;
-    font-size: 40px;
+    padding: 0px 8px 38px;
+    font-size: 39px;
   }
   
   #main-menu {
-    float: right;
+    background: #000;
   }
   
     #main-menu ul.menu {
       overflow: hidden;
+      padding: 16px 0 16px 320px;
+      width: 640px;
+      margin: 0 auto;
+      height: 18px;
     }
     
     #main-menu ul.menu li {
       float: left;
       border-left: 1px solid #ccc;
       padding: 0 8px;
+      line-height: 18px;
     }
     
     #main-menu ul.menu li:first-child {
@@ -49,6 +61,36 @@
     clear: both;
   }
   
+/* ------ // Top rows --------- */
+
+ul.panel-3-1-2-toprow {
+  border: 1px dotted #666;
+  border-width: 1px 0;
+  overflow: hidden;
+  padding: 8px 0 16px;
+  background: #d1e02b;
+}
+
+  ul.panel-3-1-2-toprow li {
+    padding: 8px 16px 8px 8px;
+  }
+
+  ul.panel-3-1-2-toprow .panel-col-topleft {
+    float: left;
+    width: 296px;
+  }
+  
+  ul.panel-3-1-2-toprow .panel-col-topright {
+    float: right;
+    width: 296px;
+  }
+  
+  ul.panel-3-1-2-toprow .panel-col-topmiddle {
+    margin: 0 320px;
+  }
+
+
+
 /* ------ // Content ---------- */
 
   #content {
@@ -117,13 +159,17 @@
 /* ------ // Footer ---------- */
 
 #footer {
+  background: #000;
+}
+
+#footer-inner {
   width: 960px;
   margin: 0 auto;
   clear: both;
   overflow: hidden;
 }
 
-  #footer>li {
+  #footer-inner>li {
     width: 224px;
     padding: 8px;
     float: left;

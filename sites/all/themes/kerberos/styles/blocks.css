@@ -1,6 +1,4 @@
 #block-ting-projects {
-  border: 2px solid #333;
-  border-width: 2px 0;
   padding: 16px 0;
   margin: 16px 0;
   overflow: hidden;
@@ -15,3 +13,4 @@
     width: 304px;
     padding: 8px;
   }
+  

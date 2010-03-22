@@ -1,13 +1,16 @@
 body {
-  font-family: "Lucida Grande", Arial, sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 62.5%;
   line-height: 1;
 }
 
+
+/* ------ // Headlines ---------- */
+
 h2, h1 {
-  font-family: Georgia;
+  font-family: ScalaSans, Arial, sans-serif;
   font-weight: bold;
-  font-size: 160%;
+  font-size: 2.3333em;
   margin-bottom: 0.2em;
 }
 
@@ -20,6 +23,69 @@ h3, h4 {
   margin-bottom: 0.5em;
 }
 
+/* ----- // Panels: Frontpage ---- */
+.panel-3-1-2-toprow h2 {
+  font-size: 2.0em;
+}
+
+.panel-3-1-2-toprow a:link {
+  color: #333;
+}
+
+.panel-3-1-2-toprow a:visited {
+  color: #555;
+}
+
+
+/* ------ // Link Styles ---------- */
+
+a:link,
+a:visited {
+  color: #9cb333;
+  text-decoration: none;
+  border-bottom: 1px dotted #9cb333;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+  border-bottom: none; 
+}
+
+
+/* ------ // Menus ---------- */
+
+#main-menu li {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+  #main-menu a:link,
+  #main-menu a:visited {
+    color: #d1e02b;
+  }
+  
+  #main-menu a:hover,
+  #main-menu a:active {
+    color: #fff;
+  }
+  
+  #main-menu a:focus {
+    border: 1px dotted #fff;
+    color: #fff;
+  }
+  
+  #main-menu .active-trail a:link,
+  #main-menu .active-trail a:visited {
+    color: #fff;
+    border-bottom: none;
+  }
+  
+
+  
+
+/* ------ // Content ---------- */
+
 #content {
   font-size: 1.2em;
   line-height: 1.5em;
@@ -27,4 +93,14 @@ h3, h4 {
 
 #content p, #content ul, #content ol, #content blockquote {
   margin-bottom: 0.4em;
+}
+
+/* ------ // Footer ---------- */
+#footer {
+  color: #fff;
+}
+
+#footer a:link,
+#footer a:visited {
+  color: #d1e02b;
 }
