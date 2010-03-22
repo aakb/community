@@ -70,7 +70,8 @@ function kerberos_preprocess_page(&$vars, $hook) {
   
     
     // Check for subprojects
-    if ($alias_parts[0] == "project") {
+    /*
+    if ($alias_parts[0] == "dting") {
 
       // Change site logo and text to project ID
       switch ($alias_parts[1]) {
@@ -80,10 +81,18 @@ function kerberos_preprocess_page(&$vars, $hook) {
           $vars['logo'] = drupal_get_path('theme', 'Kerberos') ."/images/logo-ding.png";
           break;
         default:
+          $vars['logo_alt_text'] = "ding.TING";
+          $vars['logo'] = drupal_get_path('theme', 'Kerberos') ."/images/logo-ding.png";
           break;
       }
+      
+      
+      
 
     } // end of check for subprojects
+    */
+    $vars['logo_alt_text'] = $alias_parts[0];
+    
   } // end of if module exist
 
   // Set variables for the logo and site_name.
