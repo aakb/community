@@ -24,6 +24,7 @@ h3, h4 {
 }
 
 /* ----- // Panels: Frontpage ---- */
+
 .panel-3-1-2-toprow h2 {
   font-size: 2.0em;
 }
@@ -50,6 +51,10 @@ a:hover,
 a:active {
   text-decoration: none;
   border-bottom: none; 
+}
+
+p.link:before {
+  content: "» "
 }
 
 
@@ -91,8 +96,12 @@ a:active {
   line-height: 1.5em;
 }
 
-#content p, #content ul, #content ol, #content blockquote {
-  margin-bottom: 0.4em;
+#content p, 
+#content ul, 
+#content ol, 
+#content blockquote,
+#content .field-type-text {
+  margin-bottom: 0.5em;
 }
 
 /* ------ // Footer ---------- */

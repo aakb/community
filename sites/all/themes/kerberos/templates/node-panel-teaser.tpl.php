@@ -1,8 +1,7 @@
 <?php
-// $Id: node.tpl.php,v 1.4.2.1 2009/08/10 10:48:33 goba Exp $
 
 /**
- * @file node.tpl.php
+ * @file node-panel-teaser.tpl.php
  *
  * Theme implementation to display a node.
  *
@@ -49,5 +48,5 @@
  */
 ?>
 
-  <p><?php print $content ?></p>
+  <?php print $content ?>
   <p class="link"><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title ?></a></p>

@@ -44,7 +44,6 @@
         </ul>
       </div>
     <?php endif; ?>        
-    <?php if (!empty($admin)) print $admin; ?>
     <?php print $closure ?>
   </body>
 </html>
