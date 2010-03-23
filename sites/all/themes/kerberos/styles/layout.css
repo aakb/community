@@ -18,7 +18,7 @@ body {
 }
 
   .subsite-dting-front #outer-wrapper {
-    background: #fff url("../images/back-dingting-front-slice.jpg") 0px -59px repeat-x;
+    background: #fff url("../images/back-dingting-front-slice.jpg") 0px -96px repeat-x;
   }
 
 #wrapper {
@@ -32,7 +32,7 @@ body {
   }
   
   .subsite-dting-front #wrapper {
-    background: transparent url("../images/back-dingting-front.jpg") 50% -60px no-repeat;
+    background: transparent url("../images/back-dingting-front.jpg") 50% -97px no-repeat;
   }
 
 .front #wrapper {
@@ -130,7 +130,6 @@ body {
 
 #main-menu {
   background: #222;
-  
 }
 
   #main-menu ul.menu {
@@ -197,6 +196,7 @@ ul.panel-3-1-2-toprow {
     border: none;
     padding: 0;
     color: #fff;
+    clear: both;
   }
   
     .subsite-dting-front ul.panel-3-1-2-toprow li {
@@ -215,6 +215,7 @@ ul.panel-3-1-2-toprow {
     .subsite-dting-front #content {
       clear: none;
       width: 960px;
+      overflow: visible;
     }
   
     #content h1 {
@@ -232,7 +233,7 @@ ul.panel-3-1-2-toprow {
     padding: 0 8px 16px;
   }
   
-  #content .panel-col-top {
+  .subsite-dting #content .panel-col-top {
     padding: 0 8px;
     margin-top: 37px;
   }
@@ -297,8 +298,16 @@ ul.panel-3-1-2-toprow {
   margin: 8px 0;
 }
 
+  a.download-button:hover {
+    text-decoration: underline;
+  }
+
   a.download-button span {
     display: block;
     font-weight: normal;
     font-size: 11px;
   }
+  
+    #content a.download-button:hover span {
+      text-decoration: none;
+    }
