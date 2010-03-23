@@ -1,5 +1,13 @@
 /* ------ // Main Page ---------- */
 
+body {
+  background: #222;
+}
+
+#outer-wrapper {
+  background: #fff;
+}
+
 #wrapper {
   width: 960px;
   margin: 0 auto;
@@ -26,7 +34,6 @@
     clear: right;
     margin-left: 320px;
     padding: 0px 8px 48px;
-    font-size: 39px;
   }
   
   #main-menu {
@@ -159,7 +166,7 @@ ul.panel-3-1-2-toprow {
 /* ------ // Footer ---------- */
 
 #footer {
-  background: #000;
+  background: #222;
 }
 
 #footer-inner {
@@ -167,10 +174,11 @@ ul.panel-3-1-2-toprow {
   margin: 0 auto;
   clear: both;
   overflow: hidden;
+  background: #222 url("../images/icon-empowered-black.png") 8px 97% no-repeat;
 }
 
   #footer-inner>li {
     width: 224px;
-    padding: 8px;
+    padding: 16px 8px 100px;
     float: left;
-  } 
+  }

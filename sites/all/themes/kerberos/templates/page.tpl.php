@@ -9,22 +9,24 @@
   </head>
   <body class="<?php print $body_classes; ?>"> 
     <?php if ($region_mainmenu): print '<div id="main-menu">'. $region_mainmenu .'</div>'; endif; ?>
+    <div id="outer-wrapper">
     <div id="wrapper">
       <?php if ($site_logo): print $site_logo; endif; ?>                
       <?php if ($is_front): print '<p id="mission">'. $mission .'</p>'; endif; ?>
       <?php if (!$is_front): print $breadcrumb; endif; ?>
         
       <div id="content">
-        <?php // if ($title): print '<h1>'. $title .'</h1>'; endif; ?>
-        <?php // if ($tabs): print '<div id="tabs-wrapper" class="clear-block">'; endif; ?>
-        <?php // if ($tabs): print '<ul class="tabs primary">'. $tabs .'</ul></div>'; endif; ?>
-        <?php // if ($tabs2): print '<ul class="tabs secondary">'. $tabs2 .'</ul>'; endif; ?>
-        <?php // if ($show_messages && $messages): print $messages; endif; ?>
-        <?php // print $help; ?>
+        <?php if ($title): print '<h1>'. $title .'</h1>'; endif; ?>
+        <?php if ($tabs): print '<div id="tabs-wrapper" class="clear-block">'; endif; ?>
+        <?php if ($tabs): print '<ul class="tabs primary">'. $tabs .'</ul></div>'; endif; ?>
+        <?php if ($tabs2): print '<ul class="tabs secondary">'. $tabs2 .'</ul>'; endif; ?>
+        <?php if ($show_messages && $messages): print $messages; endif; ?>
+        <?php print $help; ?>
         <?php print $content ?>
       </div>
     
       <?php if ($bottom_of_page): print '<div id="secondary-content" class="region">'. $bottom_of_page .'</div>'; endif; ?>      
+    </div>
     </div>
     <?php if($footer_1 || $footer_2 || $footer_3 || $footer_4): ?>
       <div id="footer">

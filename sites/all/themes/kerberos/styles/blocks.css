@@ -9,8 +9,12 @@
   }
 
   #block-ting-projects .pane-content li {
-    float: left;
-    width: 304px;
+    display: inline-block;
+    width: 300px;
     padding: 8px;
+    vertical-align: top;
   }
   
+  #block-ting-projects .meta {
+    display: none;
+  }
