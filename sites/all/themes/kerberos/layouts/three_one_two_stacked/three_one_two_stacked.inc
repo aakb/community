@@ -7,6 +7,7 @@ $plugin = array(
   'theme' => 'three_one_two_stacked',
   'css' => 'three_one_two_stacked.css',
   'panels' => array(
+    'mission' => t('Mission'),
     'top-left' => t('Top left'),
     'top-middle' => t('Top middle'),
     'top-right' => t('Top right'),

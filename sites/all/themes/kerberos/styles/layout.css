@@ -7,19 +7,32 @@ body {
   body.subsite-dting {
     background: #222 url("../images/back-dingting-top-black.jpg") 50% 0% no-repeat;
   }
+  
+  body.subsite-dting-front {
+    background: #222;
+  }
 
 #outer-wrapper {
   background: #fff;
+  min-height: 350px;
 }
+
+  .subsite-dting-front #outer-wrapper {
+    background: #fff url("../images/back-dingting-front-slice.jpg") 0px -59px repeat-x;
+  }
 
 #wrapper {
   width: 960px;
   margin: 0 auto;
-  padding: 20px 0 0;  
+  padding: 20px 0 46px;
 }
 
   .subsite-dting #wrapper {
     padding-top: 0;
+  }
+  
+  .subsite-dting-front #wrapper {
+    background: transparent url("../images/back-dingting-front.jpg") 50% -60px no-repeat;
   }
 
 .front #wrapper {
@@ -34,7 +47,7 @@ body {
 
 #ting-bar-inner {
   width: 946px;
-  padding: 1px 8px 0;
+  padding: 3px 8px 2px;
   margin: 0 auto;
   background: transparent;
   color: #fff;
@@ -65,8 +78,13 @@ body {
   width: 960px;
   margin: 0 auto;
   overflow: hidden;
-  padding-bottom: 22px;
-}  
+  padding-bottom: 10px;
+}
+
+  .subsite-dting-front #header.dting {
+    overflow: visible;
+    padding-bottom: 22px;
+  }  
   
 #site-logo {
   display: block;
@@ -80,11 +98,21 @@ body {
   .front #site-logo {
     margin-top: 9px;
   }
+  
+  .subsite-dting-front #site-logo {
+    margin-top: 32px;
+  }
 
 #mission {
   clear: right;
   margin-left: 320px;
   padding: 0px 8px 48px;
+}
+
+.panel-col-mission {
+  margin: 37px 0 0 328px;
+  padding-right: 8px;
+  height: 173px;
 }
 
 
@@ -120,7 +148,7 @@ body {
   
     .subsite-dting #main-menu ul.menu {
       width: auto;
-      padding: 8px 0 0;
+      padding: 12px 0 4px;
       overflow: visible;
     }
   
@@ -163,6 +191,17 @@ ul.panel-3-1-2-toprow {
   ul.panel-3-1-2-toprow .panel-col-topmiddle {
     margin: 0 320px;
   }
+  
+  .subsite-dting-front ul.panel-3-1-2-toprow {
+    background: transparent url("../images/graphic-dingting-cases.png") 50% 100% no-repeat;
+    border: none;
+    padding: 0;
+    color: #fff;
+  }
+  
+    .subsite-dting-front ul.panel-3-1-2-toprow li {
+      min-height: 218px;
+    }
 
 
 
@@ -171,9 +210,12 @@ ul.panel-3-1-2-toprow {
   #content {
     clear: both;
     overflow: hidden;
-    padding-bottom: 46px;
-    min-height: 350px;
   }
+  
+    .subsite-dting-front #content {
+      clear: none;
+      width: 960px;
+    }
   
     #content h1 {
       padding: 0 8px;
@@ -190,6 +232,11 @@ ul.panel-3-1-2-toprow {
     padding: 0 8px 16px;
   }
   
+  #content .panel-col-top {
+    padding: 0 8px;
+    margin-top: 37px;
+  }
+  
   #content .panel-col-bottom {
     clear: both;
   }
@@ -200,7 +247,8 @@ ul.panel-3-1-2-toprow {
     margin-left: 600px;
   }
   
-  .panel-col-sidebar .menu-name-primary-links {
+  .panel-col-sidebar .menu-name-primary-links,
+  .panel-col-sidebar .menu-name-menu-project-ding-main {
     margin-bottom: 24px;
   }
   
@@ -230,4 +278,27 @@ ul.panel-3-1-2-toprow {
     width: 224px;
     padding: 16px 8px 100px;
     float: left;
+  }
+
+
+/* ------ // Common elements ---------- */  
+
+#content a.download-button {
+  background: transparent url("../images/button-download.png") left top no-repeat;
+  width: 130px;
+  height: 43px;
+  display: inline-block;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  padding-left: 70px;
+  padding-top: 12px;
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+  a.download-button span {
+    display: block;
+    font-weight: normal;
+    font-size: 11px;
   }

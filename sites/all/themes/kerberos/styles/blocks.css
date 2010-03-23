@@ -18,3 +18,8 @@
   #block-ting-projects .meta {
     display: none;
   }
+
+#block-block-10 iframe {
+  width: 960px;
+  height: 735px;
+}

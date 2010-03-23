@@ -1,3 +1,9 @@
+  <?php if ($content['mission']) { ?>
+  <div class="panel-3-1-2-stacked panel-col-mission">
+    <?php print $content['mission']; ?>
+  </div>
+  <?php } ?>
+
   <?php if ($content['top-left'] || $content['top-middle'] || $content['top-right']) { ?>
     <ul class="panel-3-1-2-stacked panel-3-1-2-toprow">  
       <li class="panel-col-topleft">
@@ -13,25 +19,25 @@
   <?php } ?>
   
   <?php if ($content['top']) { ?>
-  <div class="panel-2col-stacked_left panel-col-top">
+  <div class="panel-3-1-2-stacked panel-col-top">
     <?php print $content['top']; ?>
   </div>
   <?php } ?>
   
   <?php if ($content['left']) { ?>
-    <div class="panel-2col-stacked_left panel-col-content">
+    <div class="panel-3-1-2-stacked panel-col-content">
       <?php print $content['left']; ?>
     </div>
   <?php } ?>
   
   <?php if ($content['right']) { ?>
-  <div class="panel-2col-stacked_left panel-col-sidebar">
+  <div class="panel-3-1-2-stacked panel-col-sidebar">
     <?php print $content['right']; ?>
   </div>
   <?php } ?>
   
   <?php if ($content['bottom']) { ?>
-  <div class="panel-2col-stacked_left panel-col-bottom">
+  <div class="panel-3-1-2-stacked panel-col-bottom">
     <?php print $content['bottom']; ?>
   </div>
   <?php } ?>

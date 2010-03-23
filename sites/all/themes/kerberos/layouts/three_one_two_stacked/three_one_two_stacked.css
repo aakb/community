@@ -16,7 +16,8 @@
   width: 30%;
 }
 
-#panels-dnd-main .panel-col-top {
+#panels-dnd-main .panel-col-top,
+#panels-dnd-main .panel-col-mission {
   clear: both;
   margin-bottom: 6px;
   padding: 3px;
