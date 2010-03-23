@@ -4,6 +4,10 @@ body {
   background: #222;
 }
 
+  body.subsite-dting {
+    background: #222 url("../images/back-dingting-top-black.jpg") 50% 0% no-repeat;
+  }
+
 #outer-wrapper {
   background: #fff;
 }
@@ -14,63 +18,123 @@ body {
   padding: 20px 0 0;  
 }
 
+  .subsite-dting #wrapper {
+    padding-top: 0;
+  }
+
 .front #wrapper {
   padding-top: 36px;
 }
 
-/* ------ // Header ---------- */
+/* ------ // Ting Subsite Bar ---------- */
 
-  #site-logo {
-    display: block;
-    float: left;
-    clear: right;
-    padding-left: 8px;
-    margin-top: 4px;
+#ting-bar {
+  border-bottom: 1px dotted #666;
+}
+
+#ting-bar-inner {
+  width: 946px;
+  padding: 1px 8px 0;
+  margin: 0 auto;
+  background: transparent;
+  color: #fff;
+}
+
+  #ting-id {
     border-bottom: none;
   }
   
-    .front #site-logo {
-      margin-top: 9px;
-    }
-  
-  #mission {
-    clear: right;
-    margin-left: 320px;
-    padding: 0px 8px 48px;
+  .user-menu {
+    float: left;
+    width: 450px;
+    padding-right: 25px;
   }
   
-  #main-menu {
-    background: #000;
-  }
-  
-    #main-menu ul.menu {
-      overflow: hidden;
-      padding: 16px 0 16px 320px;
-      width: 640px;
-      margin: 0 auto;
-      height: 18px;
+    .user-menu li {
+      float: right;
     }
     
-    #main-menu ul.menu li {
-      float: left;
-      border-left: 1px solid #ccc;
-      padding: 0 8px;
-      line-height: 18px;
-    }
-    
-    #main-menu ul.menu li:first-child {
-      border: none;
-    }
-  
-  .breadcrumb {
-    clear: both;
-    padding: 8px;
-    margin-bottom: 18px;
+  #search {
+    margin-left: 705px;
   }
 
-  #header-content {
-    clear: both;
+
+/* ------ // Header ---------- */
+
+#header.dting {
+  width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 22px;
+}  
+  
+#site-logo {
+  display: block;
+  float: left;
+  clear: right;
+  padding-left: 8px;
+  margin-top: 4px;
+  border-bottom: none;
+}
+
+  .front #site-logo {
+    margin-top: 9px;
   }
+
+#mission {
+  clear: right;
+  margin-left: 320px;
+  padding: 0px 8px 48px;
+}
+
+
+.breadcrumb {
+  clear: both;
+  padding: 8px;
+  margin-bottom: 18px;
+}
+
+#header-content {
+  clear: both;
+}
+
+/* ------ // Main menus ---------- */
+
+#main-menu {
+  background: #222;
+  
+}
+
+  #main-menu ul.menu {
+    overflow: hidden;
+    padding: 16px 0 16px 320px;
+    width: 640px;
+    margin: 0 auto;
+    height: 18px;
+  }
+  
+  .subsite-dting #main-menu {
+    float: right;
+    background: transparent;
+  } 
+  
+    .subsite-dting #main-menu ul.menu {
+      width: auto;
+      padding: 8px 0 0;
+      overflow: visible;
+    }
+  
+  #main-menu ul.menu li {
+    float: left;
+    border-left: 1px solid #ccc;
+    padding: 0 7px;
+    line-height: 18px;
+  }
+  
+  #main-menu ul.menu li:first-child {
+    border: none;
+  }
+
   
 /* ------ // Top rows --------- */
 
@@ -108,6 +172,7 @@ ul.panel-3-1-2-toprow {
     clear: both;
     overflow: hidden;
     padding-bottom: 46px;
+    min-height: 350px;
   }
   
     #content h1 {
@@ -145,34 +210,6 @@ ul.panel-3-1-2-toprow {
     clear: both;
   }
 
-/* ------ // Ting Subsite Bar ---------- */
-
-#ting-bar {
-  width: 928px;
-  padding: 4px 16px;
-  margin: 0 auto;
-  background: #ccc;
-  color: #fff;
-}
-
-  #ting-id {
-    float: left;
-    width: 200px;
-  }
-  
-  .user-menu {
-    float: left;
-    width: 450px;
-    padding-right: 25px;
-  }
-  
-    .user-menu li {
-      float: right;
-    }
-    
-  #search {
-    margin-left: 705px;
-  }
 
 
 /* ------ // Footer ---------- */

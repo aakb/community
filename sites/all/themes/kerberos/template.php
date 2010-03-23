@@ -22,20 +22,6 @@ function kerberos_theme(&$existing, $type, $theme, $path){
 }
 
 /**
- * Add current page to breadcrumb
- */
-
-function kerberos_breadcrumb($breadcrumb) {
-  if (!empty($breadcrumb)) {
-    $title = drupal_get_title();
-    if (!empty($title)) {
-      $breadcrumb[]=$title;
-    }
-    return '<div class="breadcrumb">'. implode(' » ', $breadcrumb) .'</div>';
-  }
-} 
-
-/**
  * Override or insert variables into page templates.
  *
  * @param $vars
@@ -112,8 +98,21 @@ function kerberos_preprocess_page(&$vars, $hook) {
     // Return the site_name even when site_name is disabled in theme settings.
     $vars['logo_alt_text'] = (empty($vars['logo_alt_text']) ? variable_get('site_name', '') : $vars['logo_alt_text']);
     $vars['site_logo'] = '<a id="site-logo" href="'. $vars['front_page'] .'" title="'. t('Home page') .'" rel="home"><img src="'. $vars['logo'] .'" alt="'. $vars['logo_alt_text'] .'" /></a>';
-  }
-  
+  }  
 }
+
+/**
+ * Add current page to breadcrumb
+ */
+
+function kerberos_breadcrumb($breadcrumb) {
+  if (!empty($breadcrumb)) {
+    $title = drupal_get_title();
+    if (!empty($title)) {
+      $breadcrumb[]=$title;
+    }
+    return '<div class="breadcrumb">'. implode(' » ', $breadcrumb) .'</div>';
+  }
+} 
 
 

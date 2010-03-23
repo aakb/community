@@ -7,18 +7,22 @@
     <?php print $styles ?>
     <?php print $scripts ?>
   </head>
-  <body>
-    <?php if (!empty($admin)) print $admin; ?> 
+  <body class="<?php print $body_classes; ?> subsite-dting">
     <div id="ting-bar">
-      <a id="ting-id" href="http://www.ting.dk/"><img src="/sites/all/themes/kerberos/images/icon-partofting.png" alt="En del af TING-familien" width="129" height="30" /></a>
+      <div id="ting-bar-inner">
+        <a id="ting-id" href="http://www.ting.dk/"><img src="/sites/all/themes/kerberos/images/icon-partofting.png" alt="En del af TING-familien" width="129" height="30" /></a>
+      </div>
     </div>
-    <div id="wrapper">
+    <div id="header" class="dting">  
       <?php if ($region_mainmenu): print '<div id="main-menu">'. $region_mainmenu .'</div>'; endif; ?>    
       <?php if ($site_logo): print $site_logo; endif; ?>
+    </div>
+    <div id="outer-wrapper">
+    <div id="wrapper">
       <?php if ($breadcrumb): print $breadcrumb; endif; ?>
         
       <div id="content">
-        <?php if ($title): print '<h1>'. $title .'</h1>'; endif; ?>
+        <?php // if ($title): print '<h1>'. $title .'</h1>'; endif; ?>
         <?php if ($tabs): print '<div id="tabs-wrapper" class="clear-block">'; endif; ?>
         <?php if ($tabs): print '<ul class="tabs primary">'. $tabs .'</ul></div>'; endif; ?>
         <?php if ($tabs2): print '<ul class="tabs secondary">'. $tabs2 .'</ul>'; endif; ?>
@@ -29,9 +33,10 @@
 
     
       <?php if ($bottom_of_page): print '<div id="secondary-content" class="region">'. $bottom_of_page .'</div>'; endif; ?>
-      
+      </div>
       <?php if($footer_1 || $footer_2 || $footer_3 || $footer_4): ?>
-        <ul id="footer">
+        <div id="footer">
+        <ul id="footer-inner">
           <li>
             <?php print $footer_1; ?>
           </li>
@@ -45,6 +50,7 @@
             <?php print $footer_4; ?>
           </li>
         </ul>
+        </div>
       <?php endif; ?>    
     </div>
     <?php print $closure ?>

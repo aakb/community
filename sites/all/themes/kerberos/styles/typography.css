@@ -105,6 +105,7 @@ p.link:before {
   #main-menu a:link,
   #main-menu a:visited {
     color: #d1e02b;
+    padding: 1px;
   }
   
   #main-menu a:hover,
@@ -115,6 +116,7 @@ p.link:before {
   #main-menu a:focus {
     border: 1px dotted #fff;
     color: #fff;
+    padding: 0;
   }
   
   #main-menu .active-trail a:link,
