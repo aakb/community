@@ -6,7 +6,6 @@ body {
 
 
 /* ------ // Headlines ---------- */
-
 h2, h1 {
   font-family: ScalaSans, Arial, sans-serif;
   font-weight: bold;
@@ -14,23 +13,51 @@ h2, h1 {
   margin-bottom: 0.2em;
 }
 
+
 h1, .panel-col-content .pane-title {
-  font-size: 200%;
-}
+  font-weight: normal;
+  margin-bottom: 0.5em;
+}  
+
+  #footer h2 {
+    font-size: 1.5em;
+    font-weight: normal;
+  }
+  
+  .panel-col-sidebar h2 {
+    font-size: 1.75em;
+    border-bottom: 1px dotted #888;
+    padding-bottom: 0.1em;
+  }
+  
+  .panel-col-sidebar .field-field-sidebar h2 {
+    font-weight: normal;
+  }
 
 h3, h4 {
   font-size: 1.5em;
   margin-bottom: 0.5em;
 }
 
-#footer h2 {
-  font-size: 1.5em;
-  font-weight: normal;
-}
+  .panel-col-sidebar h3 {
+    font-size: 1.2em;
+    margin-bottom: 0.3em;
+    margin-top: 0.2em;
+  }
+  
+  .field-item h3, .field-item h4 {
+    margin-top: 1em;
+  }
 
+
+/* ------ // Page elements -------- */
 #mission {
   font-size: 39px;
   line-height: 0.9em;
+}
+
+.not-front #mission {
+  
 }
 
 /* ----- // Panels: Frontpage ---- */
@@ -96,7 +123,20 @@ p.link:before {
     border-bottom: none;
   }
   
+  
+.panel-col-sidebar .menu a:before {
+  content: "» "
+}
 
+  .panel-col-sidebar .menu .menu li {
+    margin-left: 16px;
+  }
+  
+  .panel-col-sidebar .menu a.active-trail {
+    color: #333;
+    border-bottom: none;
+    font-weight: bold;
+  }
   
 
 /* ------ // Content ---------- */

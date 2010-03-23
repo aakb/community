@@ -22,6 +22,20 @@ function kerberos_theme(&$existing, $type, $theme, $path){
 }
 
 /**
+ * Add current page to breadcrumb
+ */
+
+function kerberos_breadcrumb($breadcrumb) {
+  if (!empty($breadcrumb)) {
+    $title = drupal_get_title();
+    if (!empty($title)) {
+      $breadcrumb[]=$title;
+    }
+    return '<div class="breadcrumb">'. implode(' » ', $breadcrumb) .'</div>';
+  }
+} 
+
+/**
  * Override or insert variables into page templates.
  *
  * @param $vars

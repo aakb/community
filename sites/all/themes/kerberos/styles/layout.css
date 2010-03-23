@@ -25,10 +25,13 @@ body {
     float: left;
     clear: right;
     padding-left: 8px;
-    margin-top: 9px;
+    margin-top: 4px;
     border-bottom: none;
-
   }
+  
+    .front #site-logo {
+      margin-top: 9px;
+    }
   
   #mission {
     clear: right;
@@ -62,6 +65,7 @@ body {
   .breadcrumb {
     clear: both;
     padding: 8px;
+    margin-bottom: 18px;
   }
 
   #header-content {
@@ -103,17 +107,22 @@ ul.panel-3-1-2-toprow {
   #content {
     clear: both;
     overflow: hidden;
+    padding-bottom: 46px;
   }
+  
+    #content h1 {
+      padding: 0 8px;
+    }
   
   #content .panel-col-content {
     float: left;
-    width: 480px;
-    padding-bottom: 16px;
+    width: 466px;
+    padding: 0 8px 16px;
   }
-  
+    
   #content .panel-col-sidebar {
     margin-left: 640px;
-    padding-bottom: 16px;
+    padding: 0 8px 16px;
   }
   
   #content .panel-col-bottom {
@@ -126,6 +135,9 @@ ul.panel-3-1-2-toprow {
     margin-left: 600px;
   }
   
+  .panel-col-sidebar .menu-name-primary-links {
+    margin-bottom: 24px;
+  }
   
 /* ------ // Secondary Content ---------- */
   

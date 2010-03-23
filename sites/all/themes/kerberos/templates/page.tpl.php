@@ -16,7 +16,7 @@
       <?php if (!$is_front): print $breadcrumb; endif; ?>
         
       <div id="content">
-        <?php if ($title): print '<h1>'. $title .'</h1>'; endif; ?>
+        <?php // if ($title): print '<h1>'. $title .'</h1>'; endif; ?>
         <?php if ($tabs): print '<div id="tabs-wrapper" class="clear-block">'; endif; ?>
         <?php if ($tabs): print '<ul class="tabs primary">'. $tabs .'</ul></div>'; endif; ?>
         <?php if ($tabs2): print '<ul class="tabs secondary">'. $tabs2 .'</ul>'; endif; ?>
