@@ -25,9 +25,18 @@
     vertical-align: top;
   }
   
+  #block-dting-features .pane-content .image-list li {
+    width: 252px;
+    padding-left: 56px;
+  }
+  
   #block-ting-projects .meta,
   #block-dting-features .meta {
     display: none;
+  }
+  
+  #block-dting-features p.link {
+    padding-left: 8px;
   }
   
 /* ----- // TING.map iframe ----- */  

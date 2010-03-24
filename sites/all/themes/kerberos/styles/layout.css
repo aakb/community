@@ -234,12 +234,20 @@ ul.panel-3-1-2-toprow {
   }
   
   .subsite-dting #content .panel-col-top {
-    padding: 0 8px;
-    margin-top: 37px;
+    margin-top: 21px;
   }
   
   #content .panel-col-bottom {
     clear: both;
+  }
+  
+  ul.image-list li {
+    padding-left: 48px;
+  }
+  
+  ul.image-list li img {
+    float: left;
+    margin-left: -48px;
   }
   
 /* ------ // Sidebar ---------- */  
