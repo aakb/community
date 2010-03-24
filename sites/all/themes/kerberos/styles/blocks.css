@@ -26,8 +26,9 @@
   }
   
   #block-dting-features .pane-content .image-list li {
-    width: 252px;
-    padding-left: 56px;
+    width: 244px;
+    padding-left: 64px;
+    list-style-type: none;
   }
   
   #block-ting-projects .meta,
