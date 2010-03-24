@@ -1,29 +1,47 @@
-#block-ting-projects {
+/* ----- // Frontpage nodes ----- */
+
+#block-ting-projects,
+#block-dting-features {
   padding: 16px 0;
   margin: 16px 0;
   overflow: hidden;
 }
 
-#block-ting-projects .pane-content ul {
+#block-ting-projects .pane-content ul,
+#block-dting-features .pane-content ul {
   padding-left: 0;
 }
 
-  #block-ting-projects .pane-title {
+  #block-ting-projects .pane-title,
+  #block-dting-features .pane-title {
     padding: 0 8px;
   }
 
-  #block-ting-projects .pane-content li {
+  #block-ting-projects .pane-content li,
+  #block-dting-features .pane-content li {
     display: inline-block;
     width: 300px;
     padding: 8px;
     vertical-align: top;
   }
   
-  #block-ting-projects .meta {
+  #block-ting-projects .meta,
+  #block-dting-features .meta {
     display: none;
   }
+  
+/* ----- // TING.map iframe ----- */  
 
 #block-block-10 iframe {
   width: 960px;
   height: 735px;
+}
+
+/* ----- // News listing ----- */
+
+li.news-item {
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px dotted #888;
+  
 }
