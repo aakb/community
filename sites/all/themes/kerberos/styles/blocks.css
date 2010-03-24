@@ -4,6 +4,10 @@
   overflow: hidden;
 }
 
+#block-ting-projects .pane-content ul {
+  padding-left: 0;
+}
+
   #block-ting-projects .pane-title {
     padding: 0 8px;
   }
