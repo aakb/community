@@ -8,6 +8,7 @@
     <?php print $scripts ?>
   </head>
   <body class="<?php print $body_classes; ?>"> 
+    <?php if (!empty($admin)) print $admin; ?> 
     <?php if ($region_mainmenu): print '<div id="main-menu">'. $region_mainmenu .'</div>'; endif; ?>
     <div id="outer-wrapper">
     <div id="wrapper">

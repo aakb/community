@@ -1,4 +1,5 @@
-body {
+body,
+#tinymce {
   font-family: Arial, sans-serif;
   font-size: 62.5%;
   line-height: 1;
@@ -6,7 +7,9 @@ body {
 
 
 /* ------ // Headlines ---------- */
-h2, h1 {
+h2, h1,
+#tinymce h1,
+#tinymce h2 {
   font-family: ScalaSans, Arial, sans-serif;
   font-weight: bold;
   font-size: 2.3333em;
@@ -35,7 +38,9 @@ h1, .panel-col-content .pane-title {
     font-weight: normal;
   }
 
-h3, h4 {
+h3, h4,
+#tinymce h3,
+#tinymce h4 {
   font-size: 1.5em;
   margin-bottom: 0.5em;
 }
@@ -46,8 +51,15 @@ h3, h4 {
     margin-top: 0.2em;
   }
   
-  .field-item h3, .field-item h4 {
+  .field-item h3, .field-item h4,
+  #tinymce h3,
+  #tinymce h4 {
     margin-top: 1em;
+  }
+  
+  .field-item h4,
+  #tinymce h4 {
+    font-size: 1.2em;
   }
 
 
@@ -158,7 +170,7 @@ p.link:before {
 
 /* ------ // Content ---------- */
 
-#content {
+#content, #tinymce>* {
   font-size: 1.2em;
   line-height: 1.5em;
 }
@@ -167,8 +179,27 @@ p.link:before {
 #content ul, 
 #content ol, 
 #content blockquote,
-#content .field-type-text {
+#content .field-type-text,
+#tinymce p,
+#tinymce ul,
+#tinymce ol {
   margin-bottom: 0.5em;
+}
+
+.field-field-body ul,
+.field-field-sidebar ul,
+#tinymce ul {
+  list-style-type: square;
+  list-style-position: outside;
+  padding-left: 20px;
+}
+
+.field-field-body ol,
+.field-field-sidebar ol,
+#tinymce ol {
+  list-style-type: decimal;
+  list-style-position: outside;
+  padding-left: 20px;
 }
 
 /* ------ // Footer ---------- */

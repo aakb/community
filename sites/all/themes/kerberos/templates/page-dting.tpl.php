@@ -8,6 +8,7 @@
     <?php print $scripts ?>
   </head>
   <body class="<?php print $body_classes; if ($is_front): print ' subsite-dting-front'; endif; ?> subsite-dting">
+    <?php if (!empty($admin)) print $admin; ?> 
     <div id="ting-bar">
       <div id="ting-bar-inner">
         <a id="ting-id" href="http://www.ting.dk/"><img src="/sites/all/themes/kerberos/images/icon-partofting.png" alt="En del af TING-familien" width="129" height="30" /></a>
