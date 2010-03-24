@@ -2,3 +2,4 @@ nbproject
 sites/default/files
 sites/default/settings.php
 sites/all/themes/genesis
+sites/default/memcache_settings.php
