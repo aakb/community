@@ -17,7 +17,7 @@ h2, h1,
 }
 
 
-h1, .panel-col-content .pane-title {
+h1, .panel-col-content .pane-title, h2.news-title {
   font-weight: normal;
   margin-bottom: 0.5em;
 }  
