@@ -1,5 +1,5 @@
 <?php
-// $Id: export.inc,v 1.19.2.10 2010/05/18 00:19:21 sdboyer Exp $
+// $Id: export.inc,v 1.19.2.7 2010/01/29 23:42:12 merlinofchaos Exp $
 
 /**
  * @file
@@ -193,17 +193,12 @@ function ctools_export_load_object_reset($table = NULL) {
   if (empty($table)) {
     ctools_static_reset('ctools_export_load_object');
     ctools_static_reset('ctools_export_load_object_all');
-    ctools_static_reset('_ctools_export_get_defaults');
-    ctools_static_reset('ctools_plugin_api_info');
   }
   else {
     $cache = &ctools_static('ctools_export_load_object');
     $cached_database = &ctools_static('ctools_export_load_object_all');
-    $cached_defaults = &ctools_static('_ctools_export_get_defaults');
     unset($cache[$table]);
     unset($cached_database[$table]);
-    unset($cached_defaults[$table]);
-    ctools_static_reset('ctools_plugin_api_info');
   }
 }
 
@@ -252,7 +247,7 @@ function ctools_get_default_object($table, $name) {
  * to get default objects.
  */
 function _ctools_export_get_defaults($table, $export) {
-  $cache = &ctools_static(__FUNCTION__, array());
+  static $cache = array();
 
   if (!isset($cache[$table])) {
     $cache[$table] = array();
@@ -271,15 +266,12 @@ function _ctools_export_get_defaults($table, $export) {
       foreach ($modules as $module) {
         $function = $module . '_' . $export['default hook'];
         if (function_exists($function)) {
-          foreach ((array) $function($export) as $name => $object) {
-            // Record the module that provides this exportable.
-            $object->export_module = $module;
-
-            if (empty($export['api'])) {
-              $cache[$table][$name] = $object;
-            }
-            else {
-	             // If version checking is enabled, ensure that the object can be used.
+          if (empty($export['api'])) {
+            $cache[$table] += (array) $function($export);
+          }
+          else {
+            foreach ((array) $function($export) as $name => $object) {
+              // If version checking is enabled, ensure that the object can be used.
               if (isset($object->api_version) &&
                 $object->api_version >= $export['api']['minimum_version'] &&
                 $object->api_version <= $export['api']['current_version']) {
@@ -355,9 +347,9 @@ function ctools_var_export($var, $prefix = '') {
     else {
       $output = "array(\n";
       foreach ($var as $key => $value) {
-        $output .= $prefix . "  '$key' => " . ctools_var_export($value, $prefix . '  ') . ",\n";
+        $output .= "  '$key' => " . ctools_var_export($value, '  ') . ",\n";
       }
-      $output .= $prefix . ')';
+      $output .= ')';
     }
   }
   else if (is_object($var) && get_class($var) === 'stdClass') {
@@ -372,6 +364,10 @@ function ctools_var_export($var, $prefix = '') {
   }
   else {
     $output = var_export($var, TRUE);
+  }
+
+  if ($prefix) {
+    $output = str_replace("\n", "\n$prefix", $output);
   }
 
   return $output;

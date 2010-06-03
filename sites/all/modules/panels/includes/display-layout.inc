@@ -1,5 +1,5 @@
 <?php
-// $Id: display-layout.inc,v 1.4.2.4 2010/05/20 09:05:37 sdboyer Exp $
+// $Id: display-layout.inc,v 1.4.2.3 2009/04/30 20:09:57 merlinofchaos Exp $
 
 /**
  * @file
@@ -15,7 +15,7 @@
  * @see panels_edit_layout() for details on the various behaviors of this function.
  */
 function _panels_edit_layout($display, $finish, $destination, $allowed_layouts) {
-  ctools_include('common', 'panels');
+  panels_load_include('common');
   ctools_include('form');
 
   $form_state = array(
@@ -74,7 +74,7 @@ function _panels_edit_layout($display, $finish, $destination, $allowed_layouts) 
  */
 function panels_choose_layout(&$form_state) {
   $display = &$form_state['display'];
-  ctools_include('common', 'panels');
+  panels_load_include('common');
 
   $layouts = panels_common_get_allowed_layouts($form_state['allowed_layouts']);
   

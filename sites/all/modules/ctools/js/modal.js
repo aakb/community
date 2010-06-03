@@ -1,4 +1,4 @@
-// $Id: modal.js,v 1.17.2.10 2010/05/26 16:42:44 merlinofchaos Exp $
+// $Id: modal.js,v 1.17.2.5 2010/01/22 06:48:08 merlinofchaos Exp $
 /**
  * @file
  *
@@ -41,8 +41,8 @@
     $('span.modal-title', Drupal.CTools.Modal.modal).html(Drupal.t('Loading...'));
     var opts = {
       // @todo this should be elsewhere.
-      opacity: Drupal.settings.CToolsModal.backDropOpacity,
-      background: Drupal.settings.CToolsModal.backDropColor
+      opacity: '.55',
+      background: '#fff'
     };
 
     Drupal.CTools.Modal.modalContent(Drupal.CTools.Modal.modal, opts);
@@ -94,18 +94,10 @@
   };
 
   /**
-   * Click function for modals that can be cached.
-   */
-  Drupal.CTools.Modal.clickAjaxCacheLink = function () {
-    Drupal.CTools.Modal.show();
-    return Drupal.CTools.AJAX.clickAJAXCacheLink.apply(this);
-  };
-
-  /**
    * Generic replacement click handler to open the modal with the destination
    * specified by the href of the link.
    */
-  Drupal.CTools.Modal.clickAjaxLink = function () {
+  Drupal.CTools.Modal.clickAjaxLink = function() {
     // show the empty dialog right away.
     Drupal.CTools.Modal.show();
     Drupal.CTools.AJAX.clickAJAXLink.apply(this);
@@ -146,12 +138,12 @@
     $(this).addClass('ctools-ajaxing');
     var object = $(this);
     try {
-      url.replace(/\/nojs(\/|$)/g, '/ajax$1');
+      url.replace('/nojs/', '/ajax/');
 
       var ajaxOptions = {
         type: 'POST',
         url: url,
-        data: { 'js': 1, 'ctools_ajax': 1, 'page_id': Drupal.CTools.AJAX.getPageId() },
+        data: { 'js': 1, 'ctools_ajax': 1 },
         global: true,
         success: Drupal.CTools.AJAX.respond,
         error: function(xhr) {
@@ -159,7 +151,7 @@
         },
         complete: function() {
           object.removeClass('ctools-ajaxing');
-          $('div.ctools-ajaxing-temporary').remove();
+          $('.ctools-ajaxing', object).removeClass('ctools-ajaxing');
         },
         dataType: 'json'
       };
@@ -180,7 +172,7 @@
     catch (err) {
       alert("An error occurred while attempting to process " + url);
       $(this).removeClass('ctools-ajaxing');
-      $('div.ctools-ajaxing-temporary').remove();
+      $('div.ctools-ajaxing', this).remove();
       return false;
     }
     return false;
@@ -199,15 +191,6 @@
    */
   Drupal.behaviors.CToolsModal = function(context) {
     // Bind links
-    // Note that doing so in this order means that the two classes can be
-    // used together safely.
-    $('a.ctools-use-modal-cache:not(.ctools-use-modal-processed)', context)
-      .addClass('ctools-use-modal-processed')
-      .click(Drupal.CTools.Modal.clickAjaxCacheLink)
-      .each(function () {
-        Drupal.CTools.AJAX.warmCache.apply(this);
-      });
-
     $('a.ctools-use-modal:not(.ctools-use-modal-processed)', context)
       .addClass('ctools-use-modal-processed')
       .click(Drupal.CTools.Modal.clickAjaxLink);
@@ -235,7 +218,7 @@
           // Make sure it knows our button.
           if (!$(this.form).hasClass('ctools-ajaxing')) {
             this.form.clk = this;
-            $(this).after('<div class="ctools-ajaxing ctools-ajaxing-temporary"> &nbsp; </div>');
+            $(this).after('<div class="ctools-ajaxing"> &nbsp; </div>');
           }
         });
 
@@ -258,7 +241,6 @@
    */
   Drupal.CTools.AJAX.commands.modal_dismiss = function(command) {
     Drupal.CTools.Modal.dismiss();
-    $('link.ctools-temporary-css').remove();
   }
 
   /**

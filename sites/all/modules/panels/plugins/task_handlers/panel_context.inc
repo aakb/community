@@ -1,5 +1,5 @@
 <?php
-// $Id: panel_context.inc,v 1.1.2.45 2010/05/20 09:05:38 sdboyer Exp $
+// $Id: panel_context.inc,v 1.1.2.43 2010/02/01 22:36:31 merlinofchaos Exp $
 
 /**
  * @file
@@ -229,6 +229,9 @@ function &panels_panel_context_get_display(&$handler) {
 
 /**
  * Check selection rules and, if passed, render the contexts.
+ *
+ * We must first check to ensure the node is of a type we're allowed
+ * to render. If not, decline to render it by returning NULL.
  */
 function panels_panel_context_render($handler, $base_contexts, $args, $test = TRUE) {
   // Go through arguments and see if they match.
@@ -375,7 +378,7 @@ function panels_panel_context_admin_summary($handler, $task, $subtask, $page, $s
 
   $display = panels_panel_context_get_display($handler);
 
-  ctools_include('plugins', 'panels');
+  panels_load_include('plugins');
   ctools_include('context');
   ctools_include('context-task-handler');
 
@@ -512,9 +515,9 @@ function panels_panel_context_admin_summary($handler, $task, $subtask, $page, $s
  * variant is called to change a pre-existing layout.
  */
 function panels_panel_context_edit_choose(&$form, &$form_state) {
-  ctools_include('common', 'panels');
-  ctools_include('display-layout', 'panels');
-  ctools_include('plugins', 'panels');
+  panels_load_include('common');
+  panels_load_include('display-layout');
+  panels_load_include('plugins');
 
   // @todo -- figure out where/how to deal with this.
   $form_state['allowed_layouts'] = 'panels_page';
@@ -558,9 +561,9 @@ function panels_panel_context_edit_choose_submit(&$form, &$form_state) {
  * directly.
  */
 function panels_panel_context_edit_layout(&$form, &$form_state) {
-  ctools_include('common', 'panels');
-  ctools_include('display-layout', 'panels');
-  ctools_include('plugins', 'panels');
+  panels_load_include('common');
+  panels_load_include('display-layout');
+  panels_load_include('plugins');
 
   // @todo -- figure out where/how to deal with this.
   $form_state['allowed_layouts'] = 'panels_page';
@@ -607,9 +610,9 @@ function panels_panel_context_edit_move(&$form, &$form_state) {
   $form_state['display'] = &panels_panel_context_get_display($form_state['handler']);
   $form_state['layout'] = $form_state['handler']->conf['temp_layout'];
 
-  ctools_include('common', 'panels');
-  ctools_include('display-layout', 'panels');
-  ctools_include('plugins', 'panels');
+  panels_load_include('common');
+  panels_load_include('display-layout');
+  panels_load_include('plugins');
 
   // Tell the Panels form not to display buttons.
   $form_state['no buttons'] = TRUE;
@@ -636,8 +639,8 @@ function panels_panel_context_edit_move(&$form, &$form_state) {
  */
 function panels_panel_context_edit_content(&$form, &$form_state) {
   ctools_include('ajax');
-  ctools_include('plugins', 'panels');
-  ctools_include('common', 'panels');
+  panels_load_include('plugins');
+  panels_load_include('common');
   ctools_include('context');
   ctools_include('context-task-handler');
 

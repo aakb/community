@@ -1,5 +1,5 @@
 <?php
-// $Id: views.inc,v 1.11.2.6 2010/05/27 22:32:30 sdboyer Exp $
+// $Id: views.inc,v 1.11.2.5 2010/02/01 21:57:37 merlinofchaos Exp $
 
 /**
  * @file
@@ -218,10 +218,7 @@ function views_content_views_select_display(&$form, &$form_state) {
 
   $displays = array();
   foreach ($view->display as $id => $display) {
-    // Content pane views should never be used this way.
-    if ($display->display_plugin != 'panel_pane') {
-      $displays[$id] = $display->display_title;
-    }
+    $displays[$id] = $display->display_title;
   }
 
   $form['display'] = array(

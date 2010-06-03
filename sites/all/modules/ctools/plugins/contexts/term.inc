@@ -1,5 +1,5 @@
 <?php
-// $Id: term.inc,v 1.5.2.3 2010/04/14 20:37:40 merlinofchaos Exp $
+// $Id: term.inc,v 1.5.2.2 2010/01/29 20:18:26 merlinofchaos Exp $
 
 /**
  * @file
@@ -23,7 +23,6 @@ $plugin = array(
   'convert list' => array(
     'tid' => t('Term ID'),
     'name' => t('Term name'),
-    'description' => t('Term Description'),
     'vid' => t('Vocabulary ID'),
   ),
   'convert' => 'ctools_context_term_convert',
@@ -45,12 +44,11 @@ function ctools_context_create_term($empty, $data = NULL, $conf = FALSE) {
   if ($conf && isset($data['tid'])) {
     $data = taxonomy_get_term($data['tid']);
   }
-  
+
   if (!empty($data)) {
-    $context->data        = $data;
-    $context->title       = $data->name;
-    $context->argument    = $data->tid;
-    $context->description = $data->description;
+    $context->data     = $data;
+    $context->title    = $data->name;
+    $context->argument = $data->tid;
     return $context;
   }
 }
@@ -61,7 +59,6 @@ function ctools_context_term_settings_form($conf) {
       'vid' => '',
       'tid' => '',
       'term' => '',
-      'description' => '',
     );
   }
 
@@ -166,7 +163,5 @@ function ctools_context_term_convert($context, $type) {
       return $context->data->name;
     case 'vid':
       return $context->data->vid;
-    case 'description':
-      return $context->data->description;
   }
 }

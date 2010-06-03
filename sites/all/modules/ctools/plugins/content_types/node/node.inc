@@ -1,5 +1,5 @@
 <?php
-// $Id: node.inc,v 1.6.2.2 2010/05/20 01:43:03 sdboyer Exp $
+// $Id: node.inc,v 1.6.2.1 2010/01/29 20:18:25 merlinofchaos Exp $
 
 /**
  * @file
@@ -76,7 +76,7 @@ function ctools_node_content_type_render($subtype, $conf, $panel_args) {
   $block->module = 'node';
   $block->delta = $node->nid;
 
-  $block->title = check_plain($node->title);
+  $block->title = $node->title;
 
   if (empty($conf['leave_node_title'])) {
     $node->title = NULL;
@@ -174,9 +174,7 @@ function  ctools_node_content_type_edit_form_validate(&$form, &$form_state) {
     $form_state['values']['nid'] = $node->nid;
   }
 
-  if (!($node || preg_match('/^[@%]\d+$/', $nid)) ||
-      // Do not allow unpublished nodes to be selected by unprivileged users
-      (empty($node->status) && !user_access('administer nodes'))) {
+  if (!($node || preg_match('/^[@%]\d+$/', $nid))) {
     form_error($form['nid'], t('Invalid node'));
   }
 }
@@ -200,12 +198,7 @@ function ctools_node_content_type_admin_title($subtype, $conf) {
 
   $node = node_load($conf['nid']);
   if ($node) {
-    if (!empty($data->status) || user_access('administer nodes')) {
-      return check_plain($node->title);
-    }
-    else {
-      return t('Unpublished node @nid', array('@nid' => $conf['nid']));
-    }
+    return check_plain($node->title);
   }
   else {
     return t('Deleted/missing node @nid', array('@nid' => $conf['nid']));
