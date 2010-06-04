@@ -64,3 +64,10 @@ li.news-item {
   border-bottom: 1px dotted #888;
   
 }
+
+/* ------ // Panels ------ */
+
+.panel-col-sidebar .panel-separator {
+  margin: 16px 0;
+  height: 1px;
+}
