@@ -186,6 +186,20 @@ p.link:before {
   margin-bottom: 0.5em;
 }
 
+#content em,
+#content i,
+#tinymce em,
+#tinymce i {
+  font-style: italic;
+}
+
+#content strong,
+#content b,
+#tinymce strong,
+#tinymce b {
+  font-weight: bold;
+}
+
 .field-field-body ul,
 .field-field-sidebar ul,
 #tinymce ul {
