@@ -1,5 +1,5 @@
 <?php
-//$Id: textile.install,v 1.2.4.1 2010/06/05 13:02:30 kiam Exp $
+//$Id: textile.install,v 1.2.4.2 2010/07/02 07:02:11 kiam Exp $
 
 /**
 * Implements hook_requirements().
@@ -7,23 +7,29 @@
 * Alert admins that they need to download the classTextile.php if they haven't
 * already.
 */
-
 function textile_requirements($phase) {
   $path = drupal_get_path('module', 'textile');
   $requirements = array();
 
-  if ($phase == 'runtime' && !file_exists($path .'/classTextile.php')) {
-    $requirements['textile'] = array(
-      'value' => t('Not installed'),
-      'severity' => REQUIREMENT_ERROR,
-      'description' => t('The classTextile.php library is missing. Drupal cannot use textile markup without this library. Please check the <a href="@url">textile module INSTALL documentation</a> for information on how to download this.', array('@url' => url($path . '/INSTALL.txt'))),
-    );
-  }
-  else {
-    $requirements['textile']['severity'] = REQUIREMENT_OK;
-  }
+  if ($phase == 'runtime') {
+    if (!file_exists($path .'/classTextile.php')) {
+      $requirements['textile'] = array(
+        'value' => t('Not installed'),
+        'severity' => REQUIREMENT_ERROR,
+        'description' => t('The classTextile.php library is missing. Drupal cannot use textile markup without this library. Please check the <a href="@url">textile module INSTALL documentation</a> for information on how to download this.', array('@url' => url($path . '/INSTALL.txt'))),
+      );
+    }
+    else {
+      module_load_include('php', 'textile', 'classTextile');
+      $textile = new Textile();
+      $requirements['textile'] = array(
+        'severity' => REQUIREMENT_OK,
+        'value' => $textile->ver,
+      );
+    }
 
-  $requirements['textile']['title'] = t('classTextile library');
+    $requirements['textile']['title'] = t('classTextile library');
+  }
 
   return $requirements;
 }
